@@ -1,0 +1,169 @@
+/*********** 
+    Fonts
+    ***********/
+
+    @font-face {
+        font-family: 'SF Pro Display';
+        src: url('../fonts/SFProDisplay-Light.eot');
+        src: url('../fonts/SFProDisplay-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFProDisplay-Light.woff2') format('woff2'),
+        url('../fonts/SFProDisplay-Light.woff') format('woff'),
+        url('../fonts/SFProDisplay-Light.ttf') format('truetype'),
+        url('../fonts/SFProDisplay-Light.svg#SFProDisplay-Light') format('svg');
+        font-weight: 200;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'SF Pro Display';
+        src: url('../fonts/SFProDisplay-Regular.eot');
+        src: url('../fonts/SFProDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFProDisplay-Regular.woff2') format('woff2'),
+        url('../fonts/SFProDisplay-Regular.woff') format('woff'),
+        url('../fonts/SFProDisplay-Regular.ttf') format('truetype'),
+        url('../fonts/SFProDisplay-Regular.svg#SFProDisplay-Regular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'SF Pro Display';
+        src: url('../fonts/SFProDisplay-Semibold.eot');
+        src: url('../fonts/SFProDisplay-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFProDisplay-Semibold.woff2') format('woff2'),
+        url('../fonts/SFProDisplay-Semibold.woff') format('woff'),
+        url('../fonts/SFProDisplay-Semibold.ttf') format('truetype'),
+        url('../fonts/SFProDisplay-Semibold.svg#SFProDisplay-Semibold') format('svg');
+        font-weight: 600;
+        font-style: normal;
+    }
+
+/*********** 
+Positioning
+***********/
+
+[class*="position-"] {
+    position: absolute;
+}
+
+.position-bottom {
+    bottom: 0;
+}
+
+.position-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*********** 
+   Colors
+***********/
+
+.bg-purple {background-color: #6636ca;}
+
+.bg-dk-purple {background-color: #260967;}
+
+.bg-navy {background-color: #000b47;}
+
+.bg-blue {background-color: #27bcd3;}
+
+/*********** 
+   General
+***********/
+
+body {
+    font-family: 'SF Pro Display', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.3em;
+    font-weight: 200;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+  h1 {
+    font-size: 3.5em;
+  }
+}
+
+/*********** 
+   Tiles
+***********/
+
+   .tile-wrapper {
+    border-radius: 12px;
+    transition: all 0.3s;
+    overflow: hidden;
+    position: relative;
+    height: 350px;
+}
+
+.tile,
+.tile:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.tile-img {
+    transition: all 0.7s ease-in-out;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tile-text {
+    -webkit-transition: opacity 300ms cubic-bezier(.33,0,.2,1);
+    -moz-transition: opacity 300ms cubic-bezier(.33,0,.2,1);
+    -ms-transition: opacity 300ms cubic-bezier(.33,0,.2,1);
+    -o-transition: opacity 300ms cubic-bezier(.33,0,.2,1);
+    transition: opacity 300ms cubic-bezier(.33,0,.2,1);
+    opacity: 0;
+    width: 100%;
+}
+
+.tile h3,
+.tile p {
+    margin-bottom: 0;
+}
+
+.tile:hover .tile-wrapper {
+    box-shadow:0 1px 0 rgba(0,0,0,0.05),0 0 8px rgba(0,0,0,0.03),0 20px 30px rgba(0,0,0,0.1);
+}
+
+.tile:hover .tile-img {
+    transform: scale(1.1);
+    opacity: .1;
+}
+
+.tile:hover .tile-text {
+    opacity: 1;
+}
+
+@media only screen and (min-width: 992px) {
+  .tile-wrapper {
+    height: 400px;
+}
+}
